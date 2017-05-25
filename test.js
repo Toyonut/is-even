@@ -29,6 +29,15 @@ describe('isEven', function () {
     (function () {
       isEven();
     }).should.throw('is-even expects a number.');
+    (function () {
+      isEven([]);
+    }).should.throw('is-even expects a number.');
+    (function () {
+      isEven('vv');
+    }).should.throw('is-even expects a number.');
+    (function () {
+      isEven({});
+    }).should.throw('is-even expects a number.');
   });
 });
 
